@@ -7,6 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 public class Rakendus {
+	@RequestMapping("/geomeetriline_keskmine")
+	String gk(Sring arv1, String arv2){
+		if(arv1==null){return "andmed puuduvad";}
+		int a1=Integer.parseInt(arv1);
+		int a2=Integer.parseInt(arv2);
+		return arv1+" ja "+arv2 + " geomeetriline keskmine on "+Math.sqrt(a1*a2);
+		
+	}
+	
 	@RequestMapping("/algus")
     String tervitusfunktsioon() {
         return "Ahoi!";
@@ -22,7 +31,7 @@ public class Rakendus {
 	}
  
     public static void main(String[] args) {
-		//System.getProperties().put("server.port", 5555);
+		System.getProperties().put("server.port", 5555);
         SpringApplication.run(Rakendus.class, args);
     }
 }
