@@ -3,10 +3,25 @@
 
 <head>
     <title>Arvutamine</title>
+    <script>
+        var yhendus=new XMLHttpRequest();
+        yhendus.onreadystatechange=andmedSaabusid;
+        function arvutamine(){
+            var a1=document.getElementById("kast1").value;
+            var a2=document.getElementById("kast2").value;
+            var aadress="/geomeetriline_keskmine?arv1="+a1+"&arv2="+a2;
+            yhendus.open("GET", aadress, true);
+            yhendus.send();
+        }
+        function andmedSaabusid(){
+            document.getElementById("vastus").innerHTML=yhendus.responseText;
+        }
+    </script>
 </head>
 <body>
   <input type="number" id="kast1">
   <input type="number" id="kast">
-  <input type="button" ivalue="Leia geomeetriline keskmine"/>
+  <input type="button" ivalue="Leia geomeetriline keskmine" onclick="arvutamine()"/>
+    <div id="vastus">Vastuse koht</div>  
 </body>
 </html>
