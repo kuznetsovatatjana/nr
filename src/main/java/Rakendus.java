@@ -12,7 +12,7 @@ public class Rakendus {
 		if(hind==null){return "andmed puuduvad";}
 		int h=Integer.parseInt(hind);
 		int k=Integer.parseInt(kogus);
-		return hind+" ja "+kogus + " ja "+arv3+" kogu summa on "+ (h*k);
+		return hind+" ja "+kogus+" kogu summa on "+ (h*k);
 		
 	}
 	
