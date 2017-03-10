@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class Rakendus {
 	@RequestMapping("/hinnakalkulaator")
-	String gk(String hind, String kogus){
+	String gk(String hind, String kogus, String kliendikaart){
 		if(hind==null){return "andmed puuduvad";}
 		int h=Integer.parseInt(hind);
 		int k=Integer.parseInt(kogus);
+		
+		
 		return hind+" ja "+kogus+" kogu summa on "+ (h*k);
 		
 	}
