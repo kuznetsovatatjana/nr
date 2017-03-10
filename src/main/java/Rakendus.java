@@ -12,8 +12,8 @@ public class Rakendus {
 		if(arv1==null){return "andmed puuduvad";}
 		int a1=Integer.parseInt(arv1);
 		int a2=Integer.parseInt(arv2);
-		int a2=Integer.parseInt(arv3);
-		return arv1+" ja "+arv2 + " ja "+arv3+" geomeetriline keskmine on "+ Math.sqrt(a1*a2*a3);
+		int a3=Integer.parseInt(arv3);
+		return arv1+" ja "+arv2 + " ja "+arv3+" geomeetriline keskmine on "+ Math.pow(a1*a2*a3, 1.0/3);
 		
 	}
 	
