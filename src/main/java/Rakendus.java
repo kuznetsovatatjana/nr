@@ -7,13 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 public class Rakendus {
-	@RequestMapping("/geomeetriline_keskmine")
-	String gk(String arv1, String arv2, String arv3){
-		if(arv1==null){return "andmed puuduvad";}
-		int a1=Integer.parseInt(arv1);
-		int a2=Integer.parseInt(arv2);
-		int a3=Integer.parseInt(arv3);
-		return arv1+" ja "+arv2 + " ja "+arv3+" geomeetriline keskmine on "+ Math.pow(a1*a2*a3, 1.0/3);
+	@RequestMapping("/hinnakalkulaator")
+	String gk(String hind, String kogus){
+		if(hind==null){return "andmed puuduvad";}
+		int h=Integer.parseInt(hind);
+		int k=Integer.parseInt(kogus);
+		return hind+" ja "+kogus + " ja "+arv3+" kogu summa on "+ (h*k);
 		
 	}
 	
