@@ -14,7 +14,7 @@ public class Rakendus {
 		int k=Integer.parseInt(kogus);
 		
 		
-		return "Toode hind on " +hind+" ja koguson  "+kogus+". Summa maksiseks on "+ (h*k);
+		return "Toode hind on " +hind+" ja kogus on  "+kogus+". Summa maksiseks on "+ (h*k);
 		
 	}
 	
