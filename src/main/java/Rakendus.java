@@ -12,13 +12,14 @@ public class Rakendus {
 		if(hind==null){return "andmed puuduvad";}
 		int h=Integer.parseInt(hind);
 		int k=Integer.parseInt(kogus);
+		boolean kk=Integer.parseInt(kliendikaart)
 		
 		
 		return "Toode hind on " +hind+" ja kogus on  "+kogus+". Summa maksiseks on "+ (h*k);
 		
 	}
 	
-	@RequestMapping("/algus")
+	/*@RequestMapping("/algus")
     String tervitusfunktsioon() {
         return "Ahoi!";
     }
@@ -35,7 +36,7 @@ public class Rakendus {
     public static void main(String[] args) {
 		//System.getProperties().put("server.port", 5555);
         SpringApplication.run(Rakendus.class, args);
-    }
+    }*/
 }
 
 //scl enable rh-maven33 bash
