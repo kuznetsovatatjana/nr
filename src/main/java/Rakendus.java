@@ -8,11 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class Rakendus {
 	@RequestMapping("/hinnakalkulaator")
-	String gk(String hind, String kogus, String kliendikaart){
+	String gk(String hind, String kogus){
 		if(hind==null){return "andmed puuduvad";}
 		int h=Integer.parseInt(hind);
 		int k=Integer.parseInt(kogus);
-		boolean kk=Integer.parseInt(kliendikaart)
 		
 		
 		return "Toode hind on " +hind+" ja kogus on  "+kogus+". Summa maksiseks on "+ (h*k);
@@ -31,12 +30,12 @@ public class Rakendus {
 	@RequestMapping("/algus2")
 	String tervitusfunktsioon2(){
 		return "Hello World!";
-	}
+	}*/
  
     public static void main(String[] args) {
 		//System.getProperties().put("server.port", 5555);
         SpringApplication.run(Rakendus.class, args);
-    }*/
+    }
 }
 
 //scl enable rh-maven33 bash
