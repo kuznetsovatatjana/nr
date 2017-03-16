@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class Rakendus {
 	@RequestMapping("/hinnakalkulaator")
-	String gk(String hind, String kogus){
+	String gk(String hind, String kogus, String kliendikaart){
 		if(hind==null){return "andmed puuduvad";}
 		int h=Integer.parseInt(hind);
 		int k=Integer.parseInt(kogus);
@@ -17,6 +17,14 @@ public class Rakendus {
 		return "Toode hind on " +hind+" ja kogus on  "+kogus+". Summa maksiseks on "+ (h*k);
 		
 	}
+	
+//Looge juurde funktsioon	
+	
+	@RequestMapping("/taistervitus")
+	String tervitusgunktsioon4(String eesnimi, String perenimi){
+	if(eesnimi==null){return "andmed puuduvad";}
+		return "Tere, kodanik " +perenimi+ " " +eesnimi+"!";
+	} 
 	
 	/*@RequestMapping("/algus")
     String tervitusfunktsioon() {
