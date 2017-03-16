@@ -23,6 +23,8 @@ public class Rakendus {
 	@RequestMapping("/taistervitus")
 	String tervitusgunktsioon4(String eesnimi, String perenimi){
 	if(eesnimi==null){return "andmed puuduvad";}
+	if(perenimi==null){return "andmed puuduvad";}
+		
 		return "Tere, kodanik " +perenimi+ " " +eesnimi+"!";
 	} 
 	
